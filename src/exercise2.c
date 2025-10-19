@@ -8,6 +8,6 @@
     }
 
     for (int i = 9; i >= 0; i--) {
-        printf("%.0lf ", arr[i]);
+        printf("%.02f ", arr[i]);
     }
 }
