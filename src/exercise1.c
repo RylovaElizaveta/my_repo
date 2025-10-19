@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <math.h>
 
 int main (int argc, char** argv) {
-    long long sum = 0;
+    double arr[10];
 
-    for (int i = 0; i < 10; i++) {
-        double num;
-        scanf("%lf", &num);
-        sum += (long long)round(num * 100);
+    for (int i = 0; i<10; i++) {
+        scanf("%lf", &arr[i]);
     }
 
-    double average = (double)sum / 1000.0;
-    average = round(average * 100) / 100;
+    double sum = 0;
 
-    printf("%.2f\n", average);
-    return 0;
+    for (int i = 0; i < 10; i++){
+        sum += arr[i];
+    }
+
+    printf("%.3f", sum / 10);
 }
 
