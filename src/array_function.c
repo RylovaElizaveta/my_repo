@@ -10,7 +10,32 @@ void join_int_arrays(int *src1, size_t size_src1, int *src2, size_t size_src2, i
     }
 }
 
-void join_and_sort_int_arrays(int* src1, size_t size_src1, int* src2, size_t size_src2, int* dest) {}
+void join_and_sort_int_arrays(int* src1, size_t size_src1, int* src2, size_t size_src2, int* dest) {
+    int i = 0, j = 0, k = 0;
+
+    while (i < size_src1 && j < size_src2) {
+        if (src1[i] < src2[j]) {
+            dest[k] = src1[i];
+            i++;
+        } else {
+            dest[k] = src2[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < size_src1) {
+        dest[k] = src1[i];
+        i++;
+        k++;
+    }
+
+    while (j < size_src2) {
+        dest[k] = src2[j];
+        j++;
+        k++;
+    }
+}
 
 void get_min_and_max_from_int_array(int* src, size_t size, int* min, int* max) {}
 
